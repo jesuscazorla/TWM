@@ -1,4 +1,5 @@
 mixin outputRating(rating)
+  - rating = Math.floor(rating);  
   - for (let i = 1; i <= rating; i++){
         i.fas.fa-star
   - }

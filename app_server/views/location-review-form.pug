@@ -3,19 +3,19 @@ extends layout
 block content
     .row.banner.border-bottom.mb-4
         .col-12
-            h1 Review Starcups
+            h1 Review #{title}
 
     .row
         .col-12.col-md-8
-            form(action="/location", method="get", role="form")
+            form(action=`/api/locations/${id}/reviews`, method="post", role="form")
                 .form-group.row
                     label.col-10.col-sm-2.col-form-label(for="name") Name
                     .col-12.col-sm-10
-                        input#name.form-control(name="name")
+                        input#name.form-control(name="author",placeholder="Your name", required="required")
                 .form-group.row 
                     label.col-10.col-sm-2.col-form-label(for="rating") Rating
                     .col-12.col-sm-2
-                        select#rating.form-control.input-sm(name="rating")
+                        select#rating.form-control.input-sm(name="rating", required="required")
                             option 5
                             option 4
                             option 3
@@ -24,7 +24,7 @@ block content
                 .form-group.row
                     label.col-10.col-sm-2.col-form-label(for="review") Review
                     .col-sm-10
-                        textarea#review.form-control(name="review", rows="5")
+                        textarea#review.form-control(name="reviewText", rows="5", placeholder="Write your review here", required="required")
                 button.btn.btn-primary.float-end Add my review
 
         .col-12.col-md-4

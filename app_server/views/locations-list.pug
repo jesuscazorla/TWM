@@ -12,7 +12,7 @@ block content
                 .card
                     .card-body 
                         h4 
-                            a(href='/location/') #{location.name}
+                            a(href='/location/'+ location._id) #{location.name}
                             small &nbsp;
                                 +outputRating(location.rating)
                             span.badge.rounded-pill.bg-primary.float-end #{location.distance}

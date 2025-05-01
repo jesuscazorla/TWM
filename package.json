@@ -11,8 +11,11 @@
     "debug": "~2.6.9",
     "express": "^4.21.2",
     "http-errors": "~1.6.3",
+    "mongoose": "^8.12.1",
     "morgan": "~1.9.1",
-    "pug": "^3.0.3"
+    "pug": "^3.0.3",
+    "request": "^2.88.2",
+    "undici": "^7.7.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
